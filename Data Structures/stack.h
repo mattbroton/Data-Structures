@@ -27,9 +27,18 @@ typedef struct Stack{
 stack * create_stack(int max);
 
 
-void resize_stack(int newsize);
+void resize_stack(stack * oldstack, int newsize);
 
 
+/*
+ deletes the stack. does not free the memory of the items placed inside.
+ */
+void delete_stack(stack * s);
+
+/*
+ pushes a new item to the top of the stack
+ */
+void push(stack * s, void * data);
 /*
  Does NOT remove the item.
  @params
@@ -39,12 +48,16 @@ void resize_stack(int newsize);
 void * read_index(stack * s , int index);
 
 
+
+void transfer_stack(stack * oldstack, stack * newstack);
+
+
 /*
  Removes the top most item from the stack if possible otherwise return NULL.
  @params
     s - stack to read from
 */
-void * get_top(stack * s);
+void * pop_top(stack * s);
 
 
 
