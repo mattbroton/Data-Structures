@@ -43,21 +43,25 @@ void resize_stack(stack * oldstack, int newsize){
         newstack->max = newsize;
         newstack->items = oldstack->items;
         
-        delete_stack(oldstack);
         
-        oldstack = newstack;
+        
+        oldstack->max = newstack->max;
+        oldstack->items = newstack->items;
+        free(oldstack->data);
+        oldstack->data = newstack->data;
+        free(newstack);
     }
 }
 
 void transfer_stack(stack * oldstack, stack * newstack){
     int c = 0;
     while( c < oldstack->items ){
-        push(newstack,read_index(oldstack, c));
+        stack_push(newstack,stack_read_index(oldstack, c));
         c++;
     }
 }
 
-void push(stack * s, void * data){
+void stack_push(stack * s, void * data){
     if( s == NULL ){
         return;
     }
@@ -68,7 +72,14 @@ void push(stack * s, void * data){
     s->items ++;
 }
 
-void * read_index(stack * s , int index){
+int stack_get_size(stack * s){
+    if( s != NULL ){
+        return s->items;
+    }
+    return 0;
+}
+
+void * stack_read_index(stack * s , int index){
     if( s == NULL ){
         return NULL;
     }
@@ -89,11 +100,4 @@ void * pop_top(stack * s){
     }
     
     return NULL;
-}
-
-int get_size(stack * s){
-    if( s == NULL ){
-        return 0;
-    }
-    return s->items;
 }

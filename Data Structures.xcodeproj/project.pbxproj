@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		777565141D4E69E900C0B270 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 777565131D4E69E900C0B270 /* main.c */; };
 		7775651D1D4E6A8600C0B270 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 7775651B1D4E6A8600C0B270 /* stack.c */; };
+		77B165121E404420006EE348 /* queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 77B165101E404420006EE348 /* queue.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		777565131D4E69E900C0B270 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		7775651B1D4E6A8600C0B270 /* stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
 		7775651C1D4E6A8600C0B270 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		77B165101E404420006EE348 /* queue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = queue.c; sourceTree = "<group>"; };
+		77B165111E404420006EE348 /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				777565131D4E69E900C0B270 /* main.c */,
 				7775651B1D4E6A8600C0B270 /* stack.c */,
 				7775651C1D4E6A8600C0B270 /* stack.h */,
+				77B165101E404420006EE348 /* queue.c */,
+				77B165111E404420006EE348 /* queue.h */,
 			);
 			path = "Data Structures";
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B165121E404420006EE348 /* queue.c in Sources */,
 				7775651D1D4E6A8600C0B270 /* stack.c in Sources */,
 				777565141D4E69E900C0B270 /* main.c in Sources */,
 			);
@@ -245,6 +251,7 @@
 				777565191D4E69E900C0B270 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

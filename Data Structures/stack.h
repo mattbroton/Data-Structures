@@ -38,16 +38,17 @@ void delete_stack(stack * s);
 /*
  pushes a new item to the top of the stack
  */
-void push(stack * s, void * data);
+void stack_push(stack * s, void * data);
 /*
  Does NOT remove the item.
  @params
     s   - stack to read from
     index - item to get
 */
-void * read_index(stack * s , int index);
+void * stack_read_index(stack * s , int index);
 
 
+int stack_get_size(stack * s);
 
 void transfer_stack(stack * oldstack, stack * newstack);
 
